@@ -14,16 +14,10 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onDelete, onToggle, onEdit }
       {tasks.map((task) => (
         <li key={task.id} className="list-group-item d-flex justify-content-between align-items-center">
           <div>
-            <input
-              type="checkbox"
-              checked={task.completed}
-              onChange={() => onToggle(task.id)}
-              className="mr-2"
-            />
             {task.title}
           </div>
           <div>
-            <button className="btn btn-success btn-sm mr-2" onClick={() => onEdit(task)}>
+            <button className="btn btn-success btn-sm m-1" onClick={() => onEdit(task)}>
               Edit
             </button>
             <button className="btn btn-danger btn-sm" onClick={() => onDelete(task.id)}>

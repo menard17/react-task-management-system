@@ -7,7 +7,7 @@ interface SearchProps {
 
 const Search: React.FC<SearchProps> = ({ query, onSearch }) => {
   return (
-    <div className="form-group">
+    <div className="form-group m-5">
       <input
         type="text"
         className="form-control"
